@@ -1,0 +1,11 @@
+{% extends 'steeplechaser/basestart.html' %}
+
+{% block javascript %}
+    <script>
+    $.ajaxSetup({
+        data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+    });
+
+    </script>
+
+{% endblock %}

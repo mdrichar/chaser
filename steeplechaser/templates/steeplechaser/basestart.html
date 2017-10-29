@@ -1,0 +1,18 @@
+{% load static %}
+<body>
+<h1> Start Project Page </h1>
+{% if project_listing %}
+<select name="sproject" id="projectSelector">
+    {% for project in project_listing %}
+    <option value="{{ project.project_id }}">{{ project.item_txt}}</option>
+    {%endfor %}
+</select>
+{% endif %}
+
+<button id="startb" onclick="go()">Start</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- link rel="stylesheet" type="text/css" href="{% static 'steeplechaser/style.css' %}" /> -->
+{% block javascript %}{%endblock %}
+
+</body>
+
