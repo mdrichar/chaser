@@ -1,6 +1,9 @@
 {% load static %}
 <body>
 <h1> Start Project Page </h1>
+<form action="{% url 'undone' %}" method="post">
+{% csrf_token %}
+<div>
 {% if project_listing %}
 <select name="sproject" id="projectSelector">
     {% for project in project_listing %}
@@ -9,7 +12,9 @@
 </select>
 {% endif %}
 
-<button id="startb" onclick="go()">Start</button>
+<button id="startb" type="submit" value="gotoundone">Start</button>
+</div>
+</form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <!-- link rel="stylesheet" type="text/css" href="{% static 'steeplechaser/style.css' %}" /> -->
 {% block javascript %}{%endblock %}

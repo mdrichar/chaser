@@ -1,0 +1,24 @@
+{% load static %}
+<body>
+<h1> Current Task Page </h1>
+<form action="{% url 'nexttodo' %}" method="post">
+{% csrf_token %}
+<div>
+<div id="current_task">Current Task: {{current_task}}</div>
+<div id="parent_task">Parent Task: {{parent_task}}</div>
+<input type="hidden" name="work_record_id" value={{work_record_id}} />
+<input type="hidden" name="current_task" value={{current_task}} />
+<input type="hidden" name="parent_task" value={{parent_task}} />
+<div><textarea name="nextstep">Default stuff</textarea></div>
+<div>
+<button name="refine" type="submit" value="vrefine">Refine</button>
+<button name="next" type="submit" value="vnext">Next Step</button>
+<button name="complete" type="submit" value="vcomplete">Complete!</button>
+</div>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- link rel="stylesheet" type="text/css" href="{% static 'steeplechaser/style.css' %}" /> -->
+{% block javascript %}{%endblock %}
+
+</body>
+
