@@ -104,6 +104,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+EMAIL_BACKEND = 'postmarker.django.EmailBackend'
+POSTMARK = {
+    'TOKEN': 'bb3a7634-23c0-410d-9808-c39b4921af8c',
+    'TEST_MODE' : True,
+    'VERBOSITY': 1,
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
@@ -147,5 +153,5 @@ STATICFILES_DIRS = [
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-LOGIN_REDIRECT_URL = '/flash/listing'
+LOGIN_REDIRECT_URL = '/steeplechaser/current'
 

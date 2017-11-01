@@ -1,11 +1,8 @@
 {% load static %}
 <body>
-<h1> Tasks Remaining to be Done</h1>
-<div>
-    {% for task in task_listing %}
-    <div>{{ task.task_id }}{{ task.item_txt}}</div>
-    {%endfor %}
-</div>
+<h1> Congratulations!</h1>
+<a href="/steeplechaser/current"><img src="{% static "media/skeleton1.gif" %}" style="max-height:200px" alt="Congratulations!" /></a>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <!-- link rel="stylesheet" type="text/css" href="{% static 'steeplechaser/style.css' %}" /> -->
 {% block javascript %}{%endblock %}

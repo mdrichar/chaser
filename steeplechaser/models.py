@@ -27,7 +27,7 @@ class WorkRecord(models.Model):
 class WorkRecordXProjectRequirement(models.Model):
     work_record_id = models.IntegerField(default=0)
     project_id = models.IntegerField(default=0)
-    user_id = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     
     def __str__(self):
         return '(' + str(self.work_record_id) + ',' + str(self.project_id) + ',' + self.user_id + ')'
