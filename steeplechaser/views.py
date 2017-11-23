@@ -137,8 +137,8 @@ def remind(request):
     postmark.emails.send(
         From='admin@steeplechaser.xyz',
         To='markedup@gmail.com',
-        Subject='Postmark test',
-        HtmlBody='<html><body><strong>Hello</strong> dear Postmark user.</body></html>')
+        Subject='Steeplechaser Reminder',
+        HtmlBody='<html><body><strong>Hello</strong> Remember your goal today!</body></html>')
     #hr = HttpRequest()
     #hr.method = 'POST'
     #hr.META['SERVER_NAME'] = 
