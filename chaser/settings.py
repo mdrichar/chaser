@@ -106,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 EMAIL_BACKEND = 'postmarker.django.EmailBackend'
 POSTMARK = {
-    'TOKEN': 'bb3a7634-23c0-410d-9808-c39b4921af8c',
+    'TOKEN': 'asdfasdfasdf-token-goes-here9b4921af8c',
     'TEST_MODE' : True,
     'VERBOSITY': 1,
 }
